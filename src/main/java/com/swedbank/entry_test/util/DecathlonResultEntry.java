@@ -1,66 +1,65 @@
 package com.swedbank.entry_test.util;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * @author ben
  * @version 1.0
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement
 public class DecathlonResultEntry {
 
-    private final String name;
+    private String name;
+    private double oneHundredMetresSprintTime;
+    private double longJumpDistance;
+    private double shotPutDistance;
+    private double highJumpDistance;
+    private double fourHundredMetresSprintTime;
+    private double oneHundredTenMetresHurdleTime;
+    private double discusThrowDistance;
+    private double poleVaultDistance;
+    private double javelinThrowDistance;
+    private double oneThousandFiveHoundedMetresRunTime;
+    private Position position;
 
-    private final double oneHundreadMetresSprintTime;
-
-    private final double longJumpDistance;
-
-    private final double shotPutDistance;
-
-    private final double highJumpDistance;
-
-    private final double fourHundreadMetresSprintTime;
-
-    private final double oneHundreadTenMetresHurdleTime;
-
-    private final double discusThrowDistance;
-
-    private final double poleVaultDistance;
-
-    private final double javelinThrowDistance;
-
-    private final double oneThousandFiveHoundreadMetresRunTime;
+    public DecathlonResultEntry() {
+    }
 
     public DecathlonResultEntry(
             String name,
-            double oneHundreadMetresSprintTime,
+            double oneHundredMetresSprintTime,
             double longJumpDistance,
             double shotPutDistance,
             double highJumpDistance,
-            double fourHundreadMetresSprintTime,
-            double oneHundreadTenMetresHurdleTime,
+            double fourHundredMetresSprintTime,
+            double oneHundredTenMetresHurdleTime,
             double discusThrowDistance,
             double poleVaultDistance,
             double javelinThrowDistance,
-            double oneThousandFiveHoundreadMetresRunTime) {
-        if (name == null)
-            throw new NullPointerException("Name can't be null");
+            double oneThousandFiveHoundedMetresRunTime, Position position) {
+        this.position = position;
         this.name = name;
-        this.oneHundreadMetresSprintTime = oneHundreadMetresSprintTime;
+        this.oneHundredMetresSprintTime = oneHundredMetresSprintTime;
         this.longJumpDistance = longJumpDistance;
         this.shotPutDistance = shotPutDistance;
         this.highJumpDistance = highJumpDistance;
-        this.fourHundreadMetresSprintTime = fourHundreadMetresSprintTime;
-        this.oneHundreadTenMetresHurdleTime = oneHundreadTenMetresHurdleTime;
+        this.fourHundredMetresSprintTime = fourHundredMetresSprintTime;
+        this.oneHundredTenMetresHurdleTime = oneHundredTenMetresHurdleTime;
         this.discusThrowDistance = discusThrowDistance;
         this.poleVaultDistance = poleVaultDistance;
         this.javelinThrowDistance = javelinThrowDistance;
-        this.oneThousandFiveHoundreadMetresRunTime = oneThousandFiveHoundreadMetresRunTime;
+        this.oneThousandFiveHoundedMetresRunTime = oneThousandFiveHoundedMetresRunTime;
     }
 
     public String getName() {
         return name;
     }
 
-    public double getOneHundreadMetresSprintTime() {
-        return oneHundreadMetresSprintTime;
+    public double getOneHundredMetresSprintTime() {
+        return oneHundredMetresSprintTime;
     }
 
     public double getLongJumpDistance() {
@@ -75,12 +74,12 @@ public class DecathlonResultEntry {
         return highJumpDistance;
     }
 
-    public double getFourHundreadMetresSprintTime() {
-        return fourHundreadMetresSprintTime;
+    public double getFourHundredMetresSprintTime() {
+        return fourHundredMetresSprintTime;
     }
 
-    public double getOneHundreadTenMetresHurdleTime() {
-        return oneHundreadTenMetresHurdleTime;
+    public double getOneHundredTenMetresHurdleTime() {
+        return oneHundredTenMetresHurdleTime;
     }
 
     public double getDiscusThrowDistance() {
@@ -95,8 +94,60 @@ public class DecathlonResultEntry {
         return javelinThrowDistance;
     }
 
-    public double getOneThousandFiveHoundreadMetresRunTime() {
-        return oneThousandFiveHoundreadMetresRunTime;
+    public double getOneThousandFiveHoundedMetresRunTime() {
+        return oneThousandFiveHoundedMetresRunTime;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setOneHundredMetresSprintTime(double oneHundredMetresSprintTime) {
+        this.oneHundredMetresSprintTime = oneHundredMetresSprintTime;
+    }
+
+    public void setLongJumpDistance(double longJumpDistance) {
+        this.longJumpDistance = longJumpDistance;
+    }
+
+    public void setShotPutDistance(double shotPutDistance) {
+        this.shotPutDistance = shotPutDistance;
+    }
+
+    public void setHighJumpDistance(double highJumpDistance) {
+        this.highJumpDistance = highJumpDistance;
+    }
+
+    public void setFourHundredMetresSprintTime(double fourHundredMetresSprintTime) {
+        this.fourHundredMetresSprintTime = fourHundredMetresSprintTime;
+    }
+
+    public void setOneHundredTenMetresHurdleTime(double oneHundredTenMetresHurdleTime) {
+        this.oneHundredTenMetresHurdleTime = oneHundredTenMetresHurdleTime;
+    }
+
+    public void setDiscusThrowDistance(double discusThrowDistance) {
+        this.discusThrowDistance = discusThrowDistance;
+    }
+
+    public void setPoleVaultDistance(double poleVaultDistance) {
+        this.poleVaultDistance = poleVaultDistance;
+    }
+
+    public void setJavelinThrowDistance(double javelinThrowDistance) {
+        this.javelinThrowDistance = javelinThrowDistance;
+    }
+
+    public void setOneThousandFiveHoundedMetresRunTime(double oneThousandFiveHoundedMetresRunTime) {
+        this.oneThousandFiveHoundedMetresRunTime = oneThousandFiveHoundedMetresRunTime;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
 
 }
