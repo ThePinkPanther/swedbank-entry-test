@@ -1,5 +1,7 @@
 package com.swedbank.entry_test.util;
 
+import com.swedbank.entry_test.util.data.DecathlonResultEntry;
+
 /**
  * @author ben
  * @version 1.0
@@ -23,16 +25,16 @@ public class StandardDecathlonPointsCounter implements DecathlonPointsCounter {
 
     private double[] getEntryFields(DecathlonResultEntry entry) {
         return new double[]{
-                entry.getOneHundreadMetresSprintTime(),
+                entry.getOneHundredMetresSprintTime(),
                 entry.getLongJumpDistance(),
                 entry.getShotPutDistance(),
                 entry.getHighJumpDistance(),
-                entry.getFourHundreadMetresSprintTime(),
-                entry.getOneHundreadTenMetresHurdleTime(),
+                entry.getFourHundredMetresSprintTime(),
+                entry.getOneHundredTenMetresHurdleTime(),
                 entry.getDiscusThrowDistance(),
                 entry.getPoleVaultDistance(),
                 entry.getJavelinThrowDistance(),
-                entry.getOneThousandFiveHoundreadMetresRunTime()
+                entry.getOneThousandFiveHoundedMetresRunTime()
         };
     }
 

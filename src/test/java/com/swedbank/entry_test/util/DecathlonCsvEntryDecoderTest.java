@@ -1,5 +1,6 @@
 package com.swedbank.entry_test.util;
 
+import com.swedbank.entry_test.util.data.DecathlonResultEntry;
 import org.junit.Before;
 import org.junit.Test;
 

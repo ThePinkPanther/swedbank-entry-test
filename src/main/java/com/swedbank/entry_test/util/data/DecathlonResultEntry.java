@@ -1,8 +1,9 @@
-package com.swedbank.entry_test.util;
+package com.swedbank.entry_test.util.data;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.Objects;
 
 /**
  * @author ben
@@ -148,6 +149,30 @@ public class DecathlonResultEntry {
 
     public void setPosition(Position position) {
         this.position = position;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof DecathlonResultEntry) {
+            DecathlonResultEntry entry = (DecathlonResultEntry) obj;
+            if (Objects.equals(entry.name,name) &&
+                    entry.oneHundredMetresSprintTime == oneHundredMetresSprintTime &&
+                    entry.longJumpDistance == longJumpDistance &&
+                    entry.shotPutDistance == shotPutDistance &&
+                    entry.highJumpDistance == highJumpDistance &&
+                    entry.fourHundredMetresSprintTime == fourHundredMetresSprintTime &&
+                    entry.oneHundredTenMetresHurdleTime == oneHundredTenMetresHurdleTime &&
+                    entry.discusThrowDistance == discusThrowDistance &&
+                    entry.poleVaultDistance == poleVaultDistance &&
+                    entry.javelinThrowDistance == javelinThrowDistance &&
+                    entry.oneThousandFiveHoundedMetresRunTime ==
+                            oneThousandFiveHoundedMetresRunTime &&
+                    Objects.equals(entry.position,position)
+                    ) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
