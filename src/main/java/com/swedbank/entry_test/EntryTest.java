@@ -1,6 +1,7 @@
 package com.swedbank.entry_test;
 
-import java.util.Arrays;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
  * @author ben
@@ -8,8 +9,13 @@ import java.util.Arrays;
  */
 public class EntryTest {
 
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(args));
+    public static void main(String[] args) throws Exception {
+        ArgumentParser parser = new ArgumentParser(args);
+
+        try (OutputStream applicationOutput = parser.getApplicationOutput();
+             InputStream applicationInput = parser.getApplicationInput()) {
+
+        }
     }
 
 }
