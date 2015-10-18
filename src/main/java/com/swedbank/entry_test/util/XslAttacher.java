@@ -13,8 +13,8 @@ import java.nio.file.Files;
  */
 public class XslAttacher {
 
-    static String XSL_HEADER_PROPERTY_NAME = "com.sun.xml.internal.bind.xmlHeaders";
-    static String XSL_HEADER = "\n<?xml-stylesheet type='text/xsl' href=\"%s\" ?>";
+    static final String XSL_HEADER_PROPERTY_NAME = "com.sun.xml.internal.bind.xmlHeaders";
+    static final String XSL_HEADER = "\n<?xml-stylesheet type='text/xsl' href=\"%s\" ?>";
 
     /**
      * Looks for specified file in resources folder, copies it to working directory and attaches

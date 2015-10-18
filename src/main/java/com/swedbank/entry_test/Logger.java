@@ -1,7 +1,5 @@
 package com.swedbank.entry_test;
 
-import com.swedbank.entry_test.util.DecodingException;
-
 import java.io.IOException;
 import java.io.OutputStream;
 

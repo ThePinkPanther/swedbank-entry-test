@@ -2,7 +2,6 @@ package com.swedbank.entry_test.util;
 
 import com.swedbank.entry_test.util.data.DecathlonResultEntry;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.Random;
@@ -25,7 +24,7 @@ public class CustomDecathlonCsvEntryDecoderTest {
     private double poleVaultDistance;
     private double javelinThrowDistance;
     private double oneThousandFiveHoundedMetresRunTime;
-    private String entry ;
+    private String entry;
 
 
     @Before
@@ -42,8 +41,8 @@ public class CustomDecathlonCsvEntryDecoderTest {
         javelinThrowDistance = generator.nextDouble();
         oneThousandFiveHoundedMetresRunTime = generator.nextDouble();
 
-        int minutes = (int) (oneThousandFiveHoundedMetresRunTime/60);
-        double seconds = oneThousandFiveHoundedMetresRunTime%60;
+        int minutes = (int) (oneThousandFiveHoundedMetresRunTime / 60);
+        double seconds = oneThousandFiveHoundedMetresRunTime % 60;
         entry = String.format(
                 "%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%d.%s",
                 name,

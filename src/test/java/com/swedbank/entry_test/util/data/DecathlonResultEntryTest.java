@@ -16,7 +16,7 @@ public class DecathlonResultEntryTest {
 
     private static final File serialisationFile = new File("test.xml");
     private JAXBContext context;
-    private static Random random = new Random();
+    private static final Random random = new Random();
 
     @Before
     public void setUp() throws Exception {

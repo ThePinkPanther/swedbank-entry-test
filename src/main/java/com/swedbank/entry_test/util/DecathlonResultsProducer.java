@@ -3,10 +3,8 @@ package com.swedbank.entry_test.util;
 import com.swedbank.entry_test.Application;
 import com.swedbank.entry_test.util.data.DecathlonResultEntry;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -25,14 +23,15 @@ public class DecathlonResultsProducer {
 
     /**
      * Reads given input source line by line and produces entries (a CSV file reader)
-     * @param source
-     * @return
+     *
+     * @param source InputStream
+     * @return Collection<DecathlonResultEntry>
      * @throws IOException
      */
-    public Collection<DecathlonResultEntry> produce(InputStream source) throws IOException {
+    public Collection<DecathlonResultEntry> produce(InputStream source) {
         Collection<DecathlonResultEntry> entries = new LinkedList<>();
         try (Scanner reader = new Scanner(source)) {
-            while ( reader.hasNext ()) {
+            while (reader.hasNext()) {
                 try {
                     String line = reader.nextLine();
                     entries.add(decoder.decode(line));

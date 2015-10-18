@@ -20,8 +20,8 @@ public class FileComparator {
 
     /**
      * Compares hashes of provided files
-     * @param f1
-     * @param f2
+     * @param f1 File
+     * @param f2 File
      * @return true if both files are the same, false otherwise;
      * @throws NoSuchAlgorithmException
      * @throws IOException

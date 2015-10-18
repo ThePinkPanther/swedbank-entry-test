@@ -10,7 +10,7 @@ import java.util.LinkedList;
  * @author ben
  * @version 1.0
  */
-public class ArgumentParser {
+class ArgumentParser {
 
     final static String OUTPUT_FILE_FLAG = "--output";
     final static String INCLUDE_XSL_FLAG = "--include-xsl";

@@ -1,6 +1,5 @@
 package com.swedbank.entry_test.util;
 
-import com.swedbank.entry_test.util.XslAttacher;
 import com.swedbank.entry_test.util.data.DecathlonResultEntryCollectionWrapper;
 import org.junit.After;
 import org.junit.Before;
@@ -9,12 +8,7 @@ import org.junit.Test;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
 import java.net.URL;
-import java.security.DigestInputStream;
-import java.security.MessageDigest;
-import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -22,14 +16,13 @@ import static org.junit.Assert.assertTrue;
 public class XslAttacherTest {
 
 
-    private JAXBContext context;
     private Marshaller marshaller;
     private XslAttacher attacher;
     private static final String resourceName = "testdecathlon.xsl";
 
     @Before
     public void setUp() throws Exception {
-        context = JAXBContext.newInstance(DecathlonResultEntryCollectionWrapper.class);
+        JAXBContext context = JAXBContext.newInstance(DecathlonResultEntryCollectionWrapper.class);
         marshaller = context.createMarshaller();
         attacher = new XslAttacher();
     }
@@ -48,7 +41,7 @@ public class XslAttacherTest {
         final URL url = this.getClass().getResource("/" + resourceName);
         final File originalXsl = new File(url.toURI());
 
-        assertTrue ( new FileComparator("MD5").compare(originalXsl,newXsl));
+        assertTrue(new FileComparator("MD5").compare(originalXsl, newXsl));
     }
 
     @After

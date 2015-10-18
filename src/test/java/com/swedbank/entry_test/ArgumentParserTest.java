@@ -26,8 +26,6 @@ public class ArgumentParserTest {
             ArgumentParser.OUTPUT_FILE_FLAG,
             OUTPUT_FILE_NAME,
             ArgumentParser.INCLUDE_XSL_FLAG};
-    private File test1orig;
-    private File test2orig;
     private File test2new;
     private File test1new;
     private File output;
@@ -37,14 +35,13 @@ public class ArgumentParserTest {
         argumentParser = new ArgumentParser();
         final URL url1 = this.getClass().getResource("/" + TEST_FILE_1_NAME);
         final URL url2 = this.getClass().getResource("/" + TEST_FILE_2_NAME);
-        test1orig = new File(url1.toURI());
-        test2orig = new File(url2.toURI());
+        File test1orig = new File(url1.toURI());
+        File test2orig = new File(url2.toURI());
         test1new = new File(TEST_FILE_1_NAME);
         test2new = new File(TEST_FILE_2_NAME);
         output = new File(OUTPUT_FILE_NAME);
         try (final OutputStream os1 = new FileOutputStream(test1new);
-             final OutputStream os2 = new FileOutputStream(test2new);
-        ) {
+             final OutputStream os2 = new FileOutputStream(test2new)) {
             Files.copy(test1orig.toPath(), os1);
             Files.copy(test2orig.toPath(), os2);
             os1.flush();

@@ -3,9 +3,6 @@ package com.swedbank.entry_test.util;
 
 import com.swedbank.entry_test.util.data.DecathlonResultEntry;
 
-import java.text.SimpleDateFormat;
-import java.util.concurrent.TimeUnit;
-
 /**
  * @author ben
  * @version 1.0
@@ -25,8 +22,9 @@ public class CustomDecathlonCsvEntryDecoder implements DecathlonEntryDecoder {
 
     /**
      * Produces decathlon entry from a CSV file line
+     *
      * @param str CSV file line
-     * @return
+     * @return DecathlonResultEntry
      * @throws DecodingException
      */
     @Override
@@ -39,8 +37,8 @@ public class CustomDecathlonCsvEntryDecoder implements DecathlonEntryDecoder {
         try {
 
             // Parse the last fields that holds minutes
-            String[] marathonTime = columns[10].split("\\.",2);
-            if (marathonTime.length != 2)  {
+            String[] marathonTime = columns[10].split("\\.", 2);
+            if (marathonTime.length != 2) {
                 throw new DecodingException(
                         "oneThousandFiveHoundedMetresRunTime format is expected to be mm:ss:SS");
             }
@@ -56,7 +54,7 @@ public class CustomDecathlonCsvEntryDecoder implements DecathlonEntryDecoder {
                     Double.parseDouble(columns[7]),
                     Double.parseDouble(columns[8]),
                     Double.parseDouble(columns[9]),
-                    Double.parseDouble(marathonTime[1])+Integer.parseInt(marathonTime[0])*60,
+                    Double.parseDouble(marathonTime[1]) + Integer.parseInt(marathonTime[0]) * 60,
                     null, null);
         } catch (NumberFormatException e) {
             throw new DecodingException(e.getMessage());
