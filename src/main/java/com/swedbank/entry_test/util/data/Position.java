@@ -15,28 +15,17 @@ public class Position {
 
     private Integer from;
     private Integer to;
-    private String title;
 
     public Position() {
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public Position(Integer from, Integer to) {
         this.from = from;
         this.to = to;
-        title = from + " - " + to;
     }
 
     public Position(Integer position) {
         from = position;
-        title = position.toString();
     }
 
     public void setFrom(Integer from) {
@@ -61,8 +50,7 @@ public class Position {
         if (obj instanceof Position) {
             Position position = (Position) obj;
             if (Objects.equals(position.from, from) &&
-                    Objects.equals(position.to, to) &&
-                    position.title.equals(title)) {
+                    Objects.equals(position.to, to)) {
                 return true;
             }
         }
