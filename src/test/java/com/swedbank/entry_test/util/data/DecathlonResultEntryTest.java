@@ -1,7 +1,5 @@
-package com.swedbank.entry_test.util;
+package com.swedbank.entry_test.util.data;
 
-import com.swedbank.entry_test.util.data.DecathlonResultEntry;
-import com.swedbank.entry_test.util.data.Position;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
@@ -40,6 +38,7 @@ public class DecathlonResultEntryTest {
                 random.nextDouble(),
                 random.nextDouble(),
                 random.nextDouble(),
+                random.nextInt(),
                 new Position(random.nextInt())
         );
         marshaller.marshal(entry, serialisationFile);

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<decathlonResults>
+    <decathlonResult>
+        <name>Siim Susi</name>
+        <oneHundredMetresSprintTime>12.61</oneHundredMetresSprintTime>
+        <longJumpDistance>5.0</longJumpDistance>
+        <shotPutDistance>9.22</shotPutDistance>
+        <highJumpDistance>1.5</highJumpDistance>
+        <fourHundredMetresSprintTime>60.39</fourHundredMetresSprintTime>
+        <oneHundredTenMetresHurdleTime>16.43</oneHundredTenMetresHurdleTime>
+        <discusThrowDistance>21.6</discusThrowDistance>
+        <poleVaultDistance>2.6</poleVaultDistance>
+        <javelinThrowDistance>35.81</javelinThrowDistance>
+        <oneThousandFiveHoundedMetresRunTime>325.72</oneThousandFiveHoundedMetresRunTime>
+        <points>1123</points>
+        <position>
+            <from>2</from>
+            <to>2</to>
+        </position>
+    </decathlonResult>
+    <decathlonResult>
+        <name>Beata Kana</name>
+        <oneHundredMetresSprintTime>13.04</oneHundredMetresSprintTime>
+        <longJumpDistance>4.53</longJumpDistance>
+        <shotPutDistance>7.79</shotPutDistance>
+        <highJumpDistance>1.55</highJumpDistance>
+        <fourHundredMetresSprintTime>64.72</fourHundredMetresSprintTime>
+        <oneHundredTenMetresHurdleTime>18.74</oneHundredTenMetresHurdleTime>
+        <discusThrowDistance>24.2</discusThrowDistance>
+        <poleVaultDistance>2.4</poleVaultDistance>
+        <javelinThrowDistance>28.2</javelinThrowDistance>
+        <oneThousandFiveHoundedMetresRunTime>410.76</oneThousandFiveHoundedMetresRunTime>
+        <points>980</points>
+        <position>
+            <from>4</from>
+            <to>5</to>
+        </position>
+    </decathlonResult>
+    <decathlonResult>
+        <name>Anti Loop</name>
+        <oneHundredMetresSprintTime>13.43</oneHundredMetresSprintTime>
+        <longJumpDistance>4.35</longJumpDistance>
+        <shotPutDistance>8.64</shotPutDistance>
+        <highJumpDistance>1.5</highJumpDistance>
+        <fourHundredMetresSprintTime>66.06</fourHundredMetresSprintTime>
+        <oneHundredTenMetresHurdleTime>19.05</oneHundredTenMetresHurdleTime>
+        <discusThrowDistance>24.89</discusThrowDistance>
+        <poleVaultDistance>2.2</poleVaultDistance>
+        <javelinThrowDistance>33.48</javelinThrowDistance>
+        <oneThousandFiveHoundedMetresRunTime>411.01</oneThousandFiveHoundedMetresRunTime>
+        <points>1117</points>
+        <position>
+            <from>3</from>
+            <to>3</to>
+        </position>
+    </decathlonResult>
+    <decathlonResult>
+        <name>Rimantas Jacikevicius</name>
+        <oneHundredMetresSprintTime>13.04</oneHundredMetresSprintTime>
+        <longJumpDistance>4.53</longJumpDistance>
+        <shotPutDistance>7.79</shotPutDistance>
+        <highJumpDistance>1.55</highJumpDistance>
+        <fourHundredMetresSprintTime>64.72</fourHundredMetresSprintTime>
+        <oneHundredTenMetresHurdleTime>18.74</oneHundredTenMetresHurdleTime>
+        <discusThrowDistance>24.2</discusThrowDistance>
+        <poleVaultDistance>2.4</poleVaultDistance>
+        <javelinThrowDistance>28.2</javelinThrowDistance>
+        <oneThousandFiveHoundedMetresRunTime>410.76</oneThousandFiveHoundedMetresRunTime>
+        <points>980</points>
+        <position>
+            <from>4</from>
+            <to>5</to>
+        </position>
+    </decathlonResult>
+    <decathlonResult>
+        <name>Jaana Lind</name>
+        <oneHundredMetresSprintTime>13.75</oneHundredMetresSprintTime>
+        <longJumpDistance>4.84</longJumpDistance>
+        <shotPutDistance>10.12</shotPutDistance>
+        <highJumpDistance>1.5</highJumpDistance>
+        <fourHundredMetresSprintTime>68.44</fourHundredMetresSprintTime>
+        <oneHundredTenMetresHurdleTime>19.18</oneHundredTenMetresHurdleTime>
+        <discusThrowDistance>30.85</discusThrowDistance>
+        <poleVaultDistance>2.8</poleVaultDistance>
+        <javelinThrowDistance>33.88</javelinThrowDistance>
+        <oneThousandFiveHoundedMetresRunTime>382.75</oneThousandFiveHoundedMetresRunTime>
+        <points>1328</points>
+        <position>
+            <from>1</from>
+            <to>1</to>
+        </position>
+    </decathlonResult>
+</decathlonResults>
