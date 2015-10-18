@@ -10,20 +10,30 @@ import java.util.Objects;
  * @version 1.0
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement
+@XmlRootElement(name = "decathlonResult")
 public class DecathlonResultEntry {
 
     private String name;
-    private double oneHundredMetresSprintTime;
-    private double longJumpDistance;
-    private double shotPutDistance;
-    private double highJumpDistance;
-    private double fourHundredMetresSprintTime;
-    private double oneHundredTenMetresHurdleTime;
-    private double discusThrowDistance;
-    private double poleVaultDistance;
-    private double javelinThrowDistance;
-    private double oneThousandFiveHoundedMetresRunTime;
+    private Double oneHundredMetresSprintTime;
+    private Double longJumpDistance;
+    private Double shotPutDistance;
+    private Double highJumpDistance;
+    private Double fourHundredMetresSprintTime;
+    private Double oneHundredTenMetresHurdleTime;
+    private Double discusThrowDistance;
+    private Double poleVaultDistance;
+    private Double javelinThrowDistance;
+    private Double oneThousandFiveHoundedMetresRunTime;
+
+    public Integer getPoints() {
+        return points;
+    }
+
+    public void setPoints(Integer points) {
+        this.points = points;
+    }
+
+    private Integer points;
     private Position position;
 
     public DecathlonResultEntry() {
@@ -31,16 +41,19 @@ public class DecathlonResultEntry {
 
     public DecathlonResultEntry(
             String name,
-            double oneHundredMetresSprintTime,
-            double longJumpDistance,
-            double shotPutDistance,
-            double highJumpDistance,
-            double fourHundredMetresSprintTime,
-            double oneHundredTenMetresHurdleTime,
-            double discusThrowDistance,
-            double poleVaultDistance,
-            double javelinThrowDistance,
-            double oneThousandFiveHoundedMetresRunTime, Position position) {
+            Double oneHundredMetresSprintTime,
+            Double longJumpDistance,
+            Double shotPutDistance,
+            Double highJumpDistance,
+            Double fourHundredMetresSprintTime,
+            Double oneHundredTenMetresHurdleTime,
+            Double discusThrowDistance,
+            Double poleVaultDistance,
+            Double javelinThrowDistance,
+            Double oneThousandFiveHoundedMetresRunTime,
+            Integer points,
+            Position position) {
+        this.points = points;
         this.position = position;
         this.name = name;
         this.oneHundredMetresSprintTime = oneHundredMetresSprintTime;
@@ -59,43 +72,43 @@ public class DecathlonResultEntry {
         return name;
     }
 
-    public double getOneHundredMetresSprintTime() {
+    public Double getOneHundredMetresSprintTime() {
         return oneHundredMetresSprintTime;
     }
 
-    public double getLongJumpDistance() {
+    public Double getLongJumpDistance() {
         return longJumpDistance;
     }
 
-    public double getShotPutDistance() {
+    public Double getShotPutDistance() {
         return shotPutDistance;
     }
 
-    public double getHighJumpDistance() {
+    public Double getHighJumpDistance() {
         return highJumpDistance;
     }
 
-    public double getFourHundredMetresSprintTime() {
+    public Double getFourHundredMetresSprintTime() {
         return fourHundredMetresSprintTime;
     }
 
-    public double getOneHundredTenMetresHurdleTime() {
+    public Double getOneHundredTenMetresHurdleTime() {
         return oneHundredTenMetresHurdleTime;
     }
 
-    public double getDiscusThrowDistance() {
+    public Double getDiscusThrowDistance() {
         return discusThrowDistance;
     }
 
-    public double getPoleVaultDistance() {
+    public Double getPoleVaultDistance() {
         return poleVaultDistance;
     }
 
-    public double getJavelinThrowDistance() {
+    public Double getJavelinThrowDistance() {
         return javelinThrowDistance;
     }
 
-    public double getOneThousandFiveHoundedMetresRunTime() {
+    public Double getOneThousandFiveHoundedMetresRunTime() {
         return oneThousandFiveHoundedMetresRunTime;
     }
 
@@ -107,43 +120,43 @@ public class DecathlonResultEntry {
         this.name = name;
     }
 
-    public void setOneHundredMetresSprintTime(double oneHundredMetresSprintTime) {
+    public void setOneHundredMetresSprintTime(Double oneHundredMetresSprintTime) {
         this.oneHundredMetresSprintTime = oneHundredMetresSprintTime;
     }
 
-    public void setLongJumpDistance(double longJumpDistance) {
+    public void setLongJumpDistance(Double longJumpDistance) {
         this.longJumpDistance = longJumpDistance;
     }
 
-    public void setShotPutDistance(double shotPutDistance) {
+    public void setShotPutDistance(Double shotPutDistance) {
         this.shotPutDistance = shotPutDistance;
     }
 
-    public void setHighJumpDistance(double highJumpDistance) {
+    public void setHighJumpDistance(Double highJumpDistance) {
         this.highJumpDistance = highJumpDistance;
     }
 
-    public void setFourHundredMetresSprintTime(double fourHundredMetresSprintTime) {
+    public void setFourHundredMetresSprintTime(Double fourHundredMetresSprintTime) {
         this.fourHundredMetresSprintTime = fourHundredMetresSprintTime;
     }
 
-    public void setOneHundredTenMetresHurdleTime(double oneHundredTenMetresHurdleTime) {
+    public void setOneHundredTenMetresHurdleTime(Double oneHundredTenMetresHurdleTime) {
         this.oneHundredTenMetresHurdleTime = oneHundredTenMetresHurdleTime;
     }
 
-    public void setDiscusThrowDistance(double discusThrowDistance) {
+    public void setDiscusThrowDistance(Double discusThrowDistance) {
         this.discusThrowDistance = discusThrowDistance;
     }
 
-    public void setPoleVaultDistance(double poleVaultDistance) {
+    public void setPoleVaultDistance(Double poleVaultDistance) {
         this.poleVaultDistance = poleVaultDistance;
     }
 
-    public void setJavelinThrowDistance(double javelinThrowDistance) {
+    public void setJavelinThrowDistance(Double javelinThrowDistance) {
         this.javelinThrowDistance = javelinThrowDistance;
     }
 
-    public void setOneThousandFiveHoundedMetresRunTime(double oneThousandFiveHoundedMetresRunTime) {
+    public void setOneThousandFiveHoundedMetresRunTime(Double oneThousandFiveHoundedMetresRunTime) {
         this.oneThousandFiveHoundedMetresRunTime = oneThousandFiveHoundedMetresRunTime;
     }
 
@@ -155,19 +168,19 @@ public class DecathlonResultEntry {
     public boolean equals(Object obj) {
         if (obj instanceof DecathlonResultEntry) {
             DecathlonResultEntry entry = (DecathlonResultEntry) obj;
-            if (Objects.equals(entry.name,name) &&
-                    entry.oneHundredMetresSprintTime == oneHundredMetresSprintTime &&
-                    entry.longJumpDistance == longJumpDistance &&
-                    entry.shotPutDistance == shotPutDistance &&
-                    entry.highJumpDistance == highJumpDistance &&
-                    entry.fourHundredMetresSprintTime == fourHundredMetresSprintTime &&
-                    entry.oneHundredTenMetresHurdleTime == oneHundredTenMetresHurdleTime &&
-                    entry.discusThrowDistance == discusThrowDistance &&
-                    entry.poleVaultDistance == poleVaultDistance &&
-                    entry.javelinThrowDistance == javelinThrowDistance &&
-                    entry.oneThousandFiveHoundedMetresRunTime ==
-                            oneThousandFiveHoundedMetresRunTime &&
-                    Objects.equals(entry.position,position)
+            if (Objects.equals(entry.name, name) &&
+                Objects.equals(entry.oneHundredMetresSprintTime, oneHundredMetresSprintTime) &&
+                Objects.equals(entry.longJumpDistance, longJumpDistance) &&
+                Objects.equals(entry.shotPutDistance, shotPutDistance) &&
+                Objects.equals(entry.highJumpDistance, highJumpDistance) &&
+                Objects.equals(entry.fourHundredMetresSprintTime, fourHundredMetresSprintTime) &&
+                Objects.equals(entry.oneHundredTenMetresHurdleTime, oneHundredTenMetresHurdleTime) &&
+                Objects.equals(entry.discusThrowDistance, discusThrowDistance) &&
+                Objects.equals(entry.poleVaultDistance, poleVaultDistance) &&
+                Objects.equals(entry.javelinThrowDistance, javelinThrowDistance) &&
+                Objects.equals(entry.oneThousandFiveHoundedMetresRunTime, oneThousandFiveHoundedMetresRunTime) &&
+                Objects.equals(entry.position, position) &&
+                Objects.equals(entry.points, points)
                     ) {
                 return true;
             }
