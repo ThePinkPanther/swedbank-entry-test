@@ -1,15 +1,13 @@
-
-
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'application'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-mainClassName = "com.swedbank.entry_test.EntryTest"
+mainClassName = "com.swedbank.entry_test.Application"
 
 run {
-    args = ["decathlon_input_1.csv", "decathlon_input_2.csv", "-o", "output.xml"]
+    args = ["decathlon_input_1.csv", "decathlon_input_2.csv", "--output", "output.xml", "--include-xsl"]
 }
 
 jar {
