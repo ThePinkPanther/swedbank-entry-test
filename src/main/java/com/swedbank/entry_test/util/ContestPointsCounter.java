@@ -6,6 +6,14 @@ package com.swedbank.entry_test.util;
  */
 public class ContestPointsCounter {
 
+    /**
+     * Counts points using standard formula: Points = INT(A(|B — P|)^C)
+     * @param result known as parameter P
+     * @param resultMultiplier known as parameter A
+     * @param resultComponent known as parameter B
+     * @param resultDegree known as parameter C
+     * @return decathlon points
+     */
     public int countPoints(
             double result,
             double resultMultiplier,
