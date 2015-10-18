@@ -38,6 +38,11 @@ public class StandardDecathlonPointsCounter implements DecathlonPointsCounter {
         };
     }
 
+    /**
+     *
+     * @param entry entry to count points for
+     * @return points sum for the provided decathlon entry
+     */
     @Override
     public int countPoints(DecathlonResultEntry entry) {
         int points = 0;
@@ -51,4 +56,5 @@ public class StandardDecathlonPointsCounter implements DecathlonPointsCounter {
         }
         return points;
     }
+
 }
