@@ -12,8 +12,13 @@ import java.util.LinkedList;
  */
 public class ArgumentParser {
 
+    final static String OUTPUT_FILE_FLAG = "--output";
+    final static String INCLUDE_XSL_FLAG = "--include-xsl";
+    final static String DEBUG_FLAG = "--debug";
 
-    private final static String OUTPUT_FILE_FLAG = "-o";
+    private boolean xslRequired = false;
+
+    private boolean debugModeActive;
 
     public Collection<File> getInputFiles() {
         return inputFiles;
@@ -21,6 +26,14 @@ public class ArgumentParser {
 
     public OutputStream getApplicationOutput() {
         return applicationOutput;
+    }
+
+    public boolean isXslRequired() {
+        return xslRequired;
+    }
+
+    public boolean isDebugModeActive() {
+        return debugModeActive;
     }
 
     public InputStream getApplicationInput() {
@@ -33,7 +46,13 @@ public class ArgumentParser {
 
     private final Collection<File> inputFiles = new LinkedList<>();
 
-    public ArgumentParser(String[] arguments) throws Exception {
+    /**
+     * Reads provided arguments and sets it's parameters based on them
+     *
+     * @param arguments input arguments (supposedly from command line)
+     * @throws Exception
+     */
+    public void parse(String[] arguments) throws Exception {
         Iterator<String> argumentIterator = Arrays.asList(arguments).iterator();
         while (argumentIterator.hasNext()) {
             String arg = argumentIterator.next();
@@ -47,6 +66,14 @@ public class ArgumentParser {
                     }
                     break;
 
+                case INCLUDE_XSL_FLAG:
+                    xslRequired = true;
+                    break;
+
+                case DEBUG_FLAG:
+                    debugModeActive = true;
+                    break;
+
                 default:
                     addInputFile(arg);
                     break;
@@ -56,7 +83,6 @@ public class ArgumentParser {
         if (inputFiles.isEmpty()) {
             throw new Exception("No input file specified");
         }
-
     }
 
     private void addInputFile(String name) throws Exception {
@@ -81,7 +107,10 @@ public class ArgumentParser {
     }
 
     private void setApplicationInput(File file) throws FileNotFoundException {
-        InputStream fileInputStream = new FileInputStream(file);
+        final InputStream fileInputStream = new SequenceInputStream(
+                new FileInputStream(file),
+                new ByteArrayInputStream("\n".getBytes())); //Provide endline between files
+
         if (applicationInput == null) {
             applicationInput = fileInputStream;
         } else {
