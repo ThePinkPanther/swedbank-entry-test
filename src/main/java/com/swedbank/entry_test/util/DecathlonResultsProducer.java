@@ -1,5 +1,6 @@
 package com.swedbank.entry_test.util;
 
+import com.swedbank.entry_test.Application;
 import com.swedbank.entry_test.util.data.DecathlonResultEntry;
 
 import java.io.BufferedReader;
@@ -8,6 +9,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 /**
  * @author ben
@@ -21,15 +23,21 @@ public class DecathlonResultsProducer {
         this.decoder = decoder;
     }
 
+    /**
+     * Reads given input source line by line and produces entries (a CSV file reader)
+     * @param source
+     * @return
+     * @throws IOException
+     */
     public Collection<DecathlonResultEntry> produce(InputStream source) throws IOException {
         Collection<DecathlonResultEntry> entries = new LinkedList<>();
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(source))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
+        try (Scanner reader = new Scanner(source)) {
+            while ( reader.hasNext ()) {
                 try {
+                    String line = reader.nextLine();
                     entries.add(decoder.decode(line));
                 } catch (DecodingException e) {
-                    //TODO set up logger
+                    Application.LOGGER.err(e);
                 }
             }
         }
