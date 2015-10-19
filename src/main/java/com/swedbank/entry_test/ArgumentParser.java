@@ -101,7 +101,7 @@ class ArgumentParser {
         File file = new File(name);
         file.createNewFile();
         if (!file.canWrite()) {
-            throw new RuntimeException("Cant write to specified output file");
+            throw new IOException("Cant write to specified output file");
         }
         applicationOutput = new FileOutputStream(file);
     }
